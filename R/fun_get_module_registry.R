@@ -10,7 +10,7 @@
 get_module_registry <- function(){
   mod <- list()
   mod$intro <- "intro"
-  mod$sse_basic <- "sse_basic"
+  mod$sse_t_test <- "sse_t_test"
   mod$sse_plus <- "sse_plus"
   mod$sse_plus_paired <- "sse_plus_paired"
   mod$sse_prop <- "sse_prop"
