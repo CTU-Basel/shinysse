@@ -8,7 +8,7 @@
 app_ui <- function(){
   mod <- fun_get_mods()
   dashboardPage(
-    header_unibas("SSE app"),
+    get_header_mint("SSE app"),
     dashboardSidebar(
       div(p(" ")),
       sidebarMenu(
