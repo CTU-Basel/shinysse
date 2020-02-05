@@ -10,5 +10,5 @@ app_ui()
 Controls the general appearance, header, sidebar, body, modules, etc.
 }
 \seealso{
-\code{\link{app}}
+\code{\link{app_server}}
 }

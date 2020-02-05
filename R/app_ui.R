@@ -2,11 +2,11 @@
 #'
 #' Controls the general appearance, header, sidebar, body, modules, etc.
 #'
-#' @seealso \code{\link{app}}
+#' @seealso \code{\link{app_server}}
 #' @export
 #'
 app_ui <- function(){
-  mod <- fun_get_mods()
+  mod <- get_module_registry()
   dashboardPage(
     get_header_mint("SSE app"),
     dashboardSidebar(
