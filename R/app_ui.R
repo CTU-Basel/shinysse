@@ -1,6 +1,6 @@
-#' Shiny main app UI function for shinysse
+#' Main shiny UI function for shinysse
 #'
-#' Controls the general appearance, header, sidebar, body, modules, etc.
+#' Controls the general appearance, header, sidebar, body, tabs with modules, etc.
 #'
 #' @seealso \code{\link{app_server}}
 #' @export

@@ -1,6 +1,6 @@
-#' Shiny module server function for the app introduction page
+#' Shiny module server for the sse introduction page
 #'
-#' @seealso \code{\link{app_intro}}
+#' @seealso \code{\link{app_intro_ui}}
 #'
 app_intro <- function(input, output, session) {
 

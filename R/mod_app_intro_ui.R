@@ -1,4 +1,4 @@
-#' Shiny module UI function for the sse introduction page
+#' Shiny module ui for the sse introduction page
 #'
 #' @seealso \code{\link{app_intro}}
 #'

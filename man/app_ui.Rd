@@ -2,12 +2,12 @@
 % Please edit documentation in R/app_ui.R
 \name{app_ui}
 \alias{app_ui}
-\title{Shiny main app UI function for shinysse}
+\title{Main shiny UI function for shinysse}
 \usage{
 app_ui()
 }
 \description{
-Controls the general appearance, header, sidebar, body, modules, etc.
+Controls the general appearance, header, sidebar, body, tabs with modules, etc.
 }
 \seealso{
 \code{\link{app_server}}
