@@ -1,0 +1,91 @@
+.skin-blue .main-header{
+  background-color: #2d373c;
+  max-height: 45px;
+  height: 45px;
+}
+
+.skin-blue .main-header .custom-head .unibas{
+  background-color: #a5d7d2;
+  height: 64px;
+}
+
+.skin-blue .main-header .custom-head .dkf{
+  background-color: #a5d7d2;
+  height: 4px;/*48px;*/
+}
+
+/* header*/
+.skin-blue .main-header .logo,
+.skin-blue .main-header .logo:hover{
+  background-color: #2d373c;
+  color: white;
+  min-height: 45px;
+  height: 45px;
+  max-height: 45px;
+  padding-top: 1px !important;
+  line-height: 45px;
+  font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight: 500;
+}
+
+.skin-blue .main-header .navbar{
+  background-color: #2d373c;
+  color: white;
+  min-height: 45px;
+  height: 45px;
+  max-height: 45px;
+  padding-top: 1px !important;
+}
+
+/* menu */
+.skin-blue .main-header .navbar .sidebar-toggle,
+.skin-blue .main-header .navbar .sidebar-toggle:hover{
+  min-height: 40px;
+  height: 40px;
+  max-height: 40px;
+  padding-top: 15px !important;
+  margin-top: 0;
+  background-color: #2d373c;
+  color: white;
+}
+
+/* sidebar */
+.skin-blue .main-sidebar{
+  background-color: #2d373c;
+}
+
+.skin-blue .main-sidebar .sidebar .sidebar-menu{
+  margin-top: 90px;
+}
+
+/* sidebar hover */
+.skin-blue .main-sidebar .sidebar .sidebar-menu a:hover{
+  background-color: white;
+  color: black;
+}
+
+/* sidebar menu items active and hover */
+.skin-blue .sidebar-menu > li.active > a,
+.skin-blue .sidebar-menu > li:hover > a{
+  border-left-color: #d20537;
+}
+
+/* slidebar */
+.skin-blue .irs-bar,
+.skin-blue .irs-bar-edge{
+  background-color: #a5d7d2;
+  border-color: #1ea5a5;
+}
+
+.skin-blue .irs-single{
+  background-color: #1ea5a5;
+}
+
+.skin-blue .content-wrapper{
+  background-color: white;
+  margin-top: 60px;
+}
+
+.skin-blue .content-wrapper .content{
+  padding-top: 20px;
+}
