@@ -1,8 +1,8 @@
 #' Shiny module server function for the sse power.prop.test module
 #'
-#' @seealso \code{\link{ssePropUI}}
+#' @seealso \code{\link{sse_prop_ui}}
 #'
-sseProp <- function(input, output, session, calcs){
+sse_prop <- function(input, output, session, calcs){
   ## define parameters and plot
 
   ## check if p1 p2 difference is in range

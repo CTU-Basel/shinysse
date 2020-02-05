@@ -15,5 +15,5 @@ app_server <- function(input, output) {
   callModule(app_intro, mod$app_intro)
   callModule(sse_ttest, mod$sse_ttest, calc_t_twosample, calc_t_paired)
   callModule(sse_ttest_plus, mod$sse_ttest_plus, calc_t_twosample)
-  callModule(sseProp, mod$sse_prop, calc_prop)
+  callModule(sse_prop, mod$sse_prop, calc_prop)
 }

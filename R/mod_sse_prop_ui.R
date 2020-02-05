@@ -1,8 +1,8 @@
 #' Shiny module UI function for the sse power.prop.test module
 #'
-#' @seealso \code{\link{sseProp}}
+#' @seealso \code{\link{sse_prop}}
 #'
-ssePropUI <- function(id, label){
+sse_prop_ui <- function(id, label){
   box_width = 3
   box_height = 190
   ns <- NS(id)

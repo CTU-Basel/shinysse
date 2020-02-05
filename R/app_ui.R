@@ -26,7 +26,7 @@ app_ui <- function(){
         app_intro_ui(mod$app_intro, label = mod$app_intro),
         sse_ttest_ui(mod$sse_ttest, label = mod$sse_ttest),
         sse_ttest_plus_ui(mod$sse_ttest_plus, label = mod$sse_ttest_plus),
-        ssePropUI(mod$sse_prop, label = mod$sse_prop)
+        sse_prop_ui(mod$sse_prop, label = mod$sse_prop)
       )
     )
   )
