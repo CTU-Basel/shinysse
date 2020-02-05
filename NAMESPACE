@@ -3,7 +3,7 @@
 export(app_server)
 export(app_ui)
 export(calc_prop)
-export(fun_calc_t)
+export(calc_t)
 export(get_header_mint)
 export(get_module_registry)
 export(run_shiny)

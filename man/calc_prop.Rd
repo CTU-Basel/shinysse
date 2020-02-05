@@ -13,7 +13,8 @@ calc_prop(n, theta, xi, alpha, save_path)
 
 \item{xi}{numeric vector containing possible range of proportions}
 
-\item{alpha}{numeric vector containing possible range of significance levels}
+\item{alpha}{numeric vector containing possible range of significance levels
+@param save_path string inidicating where the function output should be saved}
 }
 \value{
 list of calculated powCalc objects
@@ -23,10 +24,12 @@ For all pre-set combinations of n, theta, xi and alpha, this function calculates
 objects and saves.
 }
 \details{
-Input parameters are optional. Defaults:\cr
-n <- seq(from = 3, to = 10000, by = 5)\cr
-theta <- c(seq(from = 0, to = 0.15, by = 0.0125), seq(from = 0.2, to = 0.5, by = 0.05))\cr
-xi <- seq(from = 0.05, to = 1, by = 0.05)\cr
-alpha <- c(0.01, 0.025, 0.05)\cr
-save_path <- file.path("inst", "extdata", "calc_prop_test.rds")\cr
+Input parameters are optional. Defaults:
+\itemize{
+\item n <- seq(from = 3, to = 10000, by = 5)
+\item theta <- c(seq(from = 0, to = 0.15, by = 0.0125), seq(from = 0.2, to = 0.5, by = 0.05))
+\item xi <- seq(from = 0.05, to = 1, by = 0.05)
+\item alpha <- c(0.01, 0.025, 0.05)
+\item save_path <- file.path("inst", "extdata", "calc_prop_test.rds")
+}
 }

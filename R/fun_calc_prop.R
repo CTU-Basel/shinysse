@@ -3,17 +3,18 @@
 #' For all pre-set combinations of n, theta, xi and alpha, this function calculates a list of powCalc
 #' objects and saves.
 #'
-#' Input parameters are optional. Defaults:\cr
-#' n <- seq(from = 3, to = 10000, by = 5)\cr
-#' theta <- c(seq(from = 0, to = 0.15, by = 0.0125), seq(from = 0.2, to = 0.5, by = 0.05))\cr
-#' xi <- seq(from = 0.05, to = 1, by = 0.05)\cr
-#' alpha <- c(0.01, 0.025, 0.05)\cr
-#' save_path <- file.path("inst", "extdata", "calc_prop_test.rds")\cr
-#'
+#' Input parameters are optional. Defaults:
+#' * n <- seq(from = 3, to = 10000, by = 5)
+#' * theta <- c(seq(from = 0, to = 0.15, by = 0.0125), seq(from = 0.2, to = 0.5, by = 0.05))
+#' * xi <- seq(from = 0.05, to = 1, by = 0.05)
+#' * alpha <- c(0.01, 0.025, 0.05)
+#' * save_path <- file.path("inst", "extdata", "calc_prop_test.rds")
+#' @md
 #' @param n numeric vector containing possible range of sample sizes
 #' @param theta numeric vector containing possible range of effect sizes
 #' @param xi numeric vector containing possible range of proportions
 #' @param alpha numeric vector containing possible range of significance levels
+#'  @param save_path string inidicating where the function output should be saved
 #' @return list of calculated powCalc objects
 #' @export
 #'
