@@ -1,17 +1,16 @@
-#' Shiny module UI function for the sse power.t.test module with user input
+#' Shiny module UI function for the sse power.t.test module
 #'
-#' This UI gives the user an opportunity to enter two group means as numeric inputs, in addition to standard deviation,
-#' etc.
+#' This shiny UI function to be used for sse_ttest() server.
 #'
-#' @seealso \code{\link{sse_ttest_plus}}
+#' @seealso \code{\link{sse_ttest}}
 #'
-sse_ttest_plus_ui <- function(id, label){
+sse_ttest_ui <- function(id, label){
   box_width = 3
-  box_height = 230
+  box_height = 190
   ns <- NS(id)
   tabItem(label,
           br(), br(),
-          h2("T - Test based sample size estimation with input"),
+          h2("T - Test based sample size estimation"),
           fluidPage(
             fluidRow(
               br(),br(),
@@ -20,38 +19,40 @@ sse_ttest_plus_ui <- function(id, label){
             ),
             fluidRow(
               box(
-                title = "Example data",
-                numericInput(ns("mean_g1"), "Mean group 1:", 10, min = 1, max = 1000, step = 1),
-                numericInput(ns("mean_g2"), "Mean group 2:", 15, min = 1, max = 1000, step = 1),
-                sliderInput(ns("stdev"), "Standard deviation:", 1, 50, 30),
-                # numericInput(ns("stdev"), "Standard deviation:", 10, min = 1, max = 50, step = 1),
-                #textInput(ns("mean_g1"), value = 10, "Mean group 1"),
-                width = 2,
-                height = box_height * 1.5
-              ),
-              box(
-                plotOutput(ns("out_plot_density")),
-                width = 4,
-                height = box_height * 1.5
-              ),
+                radioButtons(ns("in_type"), "Select a t-test type:", c("two-sample", "paired")),
+              )
+            ),
+            fluidRow(
               box(
                 title = "Power",
                 radioButtons(ns("in_power"), "Select a power:", c(0.7, 0.8, 0.9, 0.95)),
                 width = box_width,
-                height = box_height * 1.5
+                height = box_height
               ),
               box(
                 title = "Significance level",
                 radioButtons(ns("in_alpha"), HTML("Select a significance (&alpha;) level:"), c(0.01, 0.025, 0.05)),
                 width = box_width,
-                height = box_height * 1.5
+                height = box_height
+              ),
+              box(
+                title = "Effect size",
+                sliderInput(ns("in_slider2"), "Select expected effect size:", 1, 50, 40),
+                width = box_width,
+                height = box_height
+              ),
+              box(
+                title = "Standard deviation",
+                sliderInput(ns("in_slider1"), "Select expected standard deviation:", 1, 80, 20),
+                width = box_width,
+                height = box_height
               )
             ),
             fluidRow(
               box(
-                plotOutput(ns("out_plot_sse"), height = 250 * 2),
+                plotOutput(ns("out_plot1"), height = 250*2),
                 width = 12,
-                height = 250 * 2 + 20
+                height = 250*2+20
               ),
             )
           )
