@@ -12,7 +12,6 @@ get_module_registry <- function(){
   mod$app_intro <- "app_intro"
   mod$sse_ttest <- "sse_ttest"
   mod$sse_ttest_plus <- "sse_ttest_plus"
-  mod$sse_plus_paired <- "sse_plus_paired"
   mod$sse_prop <- "sse_prop"
   return(mod)
 }

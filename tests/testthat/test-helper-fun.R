@@ -15,5 +15,5 @@ mod <- get_module_registry()
 
 test_that("Module registry", {
   expect_equal(typeof(mod), "list")
-  expect_equal(length(mod), 5)
+  expect_equal(length(mod), 4)
 })

@@ -15,7 +15,6 @@ app_ui <- function(){
         menuItem("Introduction", tabName = mod$app_intro, icon = icon("info")),
         menuItem("Two sample t-Test SSE", tabName = mod$sse_ttest, icon = icon("text-size", lib = "glyphicon")),
         menuItem("Two sample t-Test SSE + input", tabName = mod$sse_ttest_plus, icon = icon("text-size", lib = "glyphicon")),
-        menuItem("Paired t-Test SSE + input", tabName = mod$sse_plus_paired, icon = icon("text-size", lib = "glyphicon")),
         menuItem("Proportion Test SSE", tabName = mod$sse_prop, icon = icon("percentage"))
       )
     ),
@@ -27,7 +26,6 @@ app_ui <- function(){
         app_intro_ui(mod$app_intro, label = mod$app_intro),
         sse_ttest_ui(mod$sse_ttest, label = mod$sse_ttest),
         sse_ttest_plus_ui(mod$sse_ttest_plus, label = mod$sse_ttest_plus),
-        sse_ttest_plus_ui(mod$sse_plus_paired, label = mod$sse_plus_paired),
         ssePropUI(mod$sse_prop, label = mod$sse_prop)
       )
     )
