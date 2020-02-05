@@ -12,7 +12,7 @@ app_server <- function(input, output) {
   calc_prop <- readRDS(system.file("extdata/calc_prop_test.rds", package = "shinysse"))
   # modules
   mod <- get_module_registry()
-  callModule(intro, mod$intro)
+  callModule(app_intro, mod$app_intro)
   callModule(sse_t_test, mod$sse_t_test, calc_t_twosample, calc_t_paired)
   callModule(ssePlus, mod$sse_plus, calc_t_twosample)
   callModule(ssePlus, mod$sse_plus_paired, calc_t_paired)

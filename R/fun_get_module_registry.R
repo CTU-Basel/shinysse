@@ -9,7 +9,7 @@
 #'
 get_module_registry <- function(){
   mod <- list()
-  mod$intro <- "intro"
+  mod$app_intro <- "app_intro"
   mod$sse_t_test <- "sse_t_test"
   mod$sse_plus <- "sse_plus"
   mod$sse_plus_paired <- "sse_plus_paired"

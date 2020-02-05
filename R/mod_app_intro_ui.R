@@ -1,8 +1,8 @@
 #' Shiny module UI function for the sse introduction page
 #'
-#' @seealso \code{\link{intro}}
+#' @seealso \code{\link{app_intro}}
 #'
-introUI <- function(id, label){
+app_intro_ui <- function(id, label){
   ns <- NS(id)
   tabItem(label,
           br(), br(),
