@@ -1,10 +1,10 @@
 #' Shiny module server function for the sse power.t.test module
 #'
-#' This shiny server function to be used for sse_t_test_ui().
+#' This shiny server function to be used for sse_ttest_ui().
 #'
-#' @seealso \code{\link{sse_t_test_ui}}
+#' @seealso \code{\link{sse_ttest_ui}}
 #'
-sse_t_test <- function(input, output, session, calcs_twosample, calcs_paired){
+sse_ttest <- function(input, output, session, calcs_twosample, calcs_paired){
   ## define parameters and plot
   output$out_plot1 <- renderPlot({
     sigLevel <- as.numeric(input$in_alpha)

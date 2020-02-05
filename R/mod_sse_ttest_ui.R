@@ -3,9 +3,9 @@
 #' This UI gives the user an opportunity to enter two group means as numeric inputs, in addition to standard deviation,
 #' etc.
 #'
-#' @seealso \code{\link{ssePlus}}
+#' @seealso \code{\link{sse_ttest_plus}}
 #'
-ssePlusUI <- function(id, label){
+sse_ttest_plus_ui <- function(id, label){
   box_width = 3
   box_height = 230
   ns <- NS(id)

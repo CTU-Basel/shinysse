@@ -1,10 +1,10 @@
 #' Shiny module UI function for the sse power.t.test module
 #'
-#' This shiny UI function to be used for sse_t_test() server.
+#' This shiny UI function to be used for sse_ttest() server.
 #'
-#' @seealso \code{\link{sse_t_test}}
+#' @seealso \code{\link{sse_ttest}}
 #'
-sse_t_test_ui <- function(id, label){
+sse_ttest_ui <- function(id, label){
   box_width = 3
   box_height = 190
   ns <- NS(id)

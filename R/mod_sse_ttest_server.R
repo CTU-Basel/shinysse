@@ -1,10 +1,10 @@
 #' Shiny module server function for the sse power.t.test module with user input
 #'
-#' This shiny server function to be used for ssePlusUI().
+#' This shiny server function to be used for sse_ttest_plus_ui().
 #'
-#' @seealso \code{\link{ssePlusUI}}
+#' @seealso \code{\link{sse_ttest_plus_ui}}
 #'
-ssePlus <- function(input, output, session, calcs){
+sse_ttest_plus <- function(input, output, session, calcs){
   ## validity checks
   effSize <- reactive({
     m1 <- input$mean_g1

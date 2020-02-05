@@ -13,8 +13,8 @@ app_server <- function(input, output) {
   # modules
   mod <- get_module_registry()
   callModule(app_intro, mod$app_intro)
-  callModule(sse_t_test, mod$sse_t_test, calc_t_twosample, calc_t_paired)
-  callModule(ssePlus, mod$sse_plus, calc_t_twosample)
-  callModule(ssePlus, mod$sse_plus_paired, calc_t_paired)
+  callModule(sse_ttest, mod$sse_ttest, calc_t_twosample, calc_t_paired)
+  callModule(sse_ttest_plus, mod$sse_ttest_plus, calc_t_twosample)
+  callModule(sse_ttest_plus, mod$sse_plus_paired, calc_t_paired)
   callModule(sseProp, mod$sse_prop, calc_prop)
 }
