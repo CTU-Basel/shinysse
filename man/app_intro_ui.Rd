@@ -2,12 +2,12 @@
 % Please edit documentation in R/mod_app_intro_ui.R
 \name{app_intro_ui}
 \alias{app_intro_ui}
-\title{Shiny module UI function for the sse introduction page}
+\title{Shiny module ui for the sse introduction page}
 \usage{
 app_intro_ui(id, label)
 }
 \description{
-Shiny module UI function for the sse introduction page
+Shiny module ui for the sse introduction page
 }
 \seealso{
 \code{\link{app_intro}}

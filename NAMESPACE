@@ -2,7 +2,7 @@
 
 export(app_server)
 export(app_ui)
-export(fun_calc_prop)
+export(calc_prop)
 export(fun_calc_t)
 export(get_header_mint)
 export(get_module_registry)

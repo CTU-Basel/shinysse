@@ -2,13 +2,13 @@
 % Please edit documentation in R/mod_app_intro_server.R
 \name{app_intro}
 \alias{app_intro}
-\title{Shiny module server function for the app introduction page}
+\title{Shiny module server for the sse introduction page}
 \usage{
 app_intro(input, output, session)
 }
 \description{
-Shiny module server function for the app introduction page
+Shiny module server for the sse introduction page
 }
 \seealso{
-\code{\link{app_intro}}
+\code{\link{app_intro_ui}}
 }
