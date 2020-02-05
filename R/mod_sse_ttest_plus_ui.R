@@ -15,8 +15,12 @@ sse_ttest_plus_ui <- function(id, label){
           fluidPage(
             fluidRow(
               br(), br(),
-              p(""),
-              br(), br()
+              p("")
+            ),
+            fluidRow(
+              box(
+                radioButtons(ns("in_type"), "Select a t-test type:", c("two-sample", "paired")),
+              )
             ),
             fluidRow(
               box(

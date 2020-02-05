@@ -14,8 +14,7 @@ sse_ttest_ui <- function(id, label){
           fluidPage(
             fluidRow(
               br(), br(),
-              p(""),
-              br(), br()
+              p("")
             ),
             fluidRow(
               box(

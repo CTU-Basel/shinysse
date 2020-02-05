@@ -4,7 +4,7 @@
 #'
 #' @seealso \code{\link{sse_ttest_plus_ui}}
 #'
-sse_ttest_plus <- function(input, output, session, calcs){
+sse_ttest_plus <- function(input, output, session, calcs_twosample, calcs_paired){
   ## validity checks
   effSize <- reactive({
     m1 <- input$mean_g1
@@ -52,6 +52,11 @@ sse_ttest_plus <- function(input, output, session, calcs){
     sigLevel <- as.numeric(input$in_alpha)
     power <- as.numeric(input$in_power)
     sd <- as.numeric(input$stdev)
+    if (input$in_type == "paired"){
+      calcs <- calcs_paired
+    } else{
+      calcs <- calcs_twosample
+    }
 
     calc <- calcs[[paste0("alpha", sub(".", "p", sigLevel, fixed = TRUE))]]
     example <- powEx(calc, theta = effSize(), xi = sd, power = power)

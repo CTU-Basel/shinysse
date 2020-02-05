@@ -4,7 +4,7 @@
 \alias{sse_ttest_plus}
 \title{Shiny module server function for the sse power.t.test module with user input}
 \usage{
-sse_ttest_plus(input, output, session, calcs)
+sse_ttest_plus(input, output, session, calcs_twosample, calcs_paired)
 }
 \description{
 This shiny server function to be used for sse_ttest_plus_ui().
