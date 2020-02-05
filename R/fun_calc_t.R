@@ -9,7 +9,6 @@
 #' @export
 #'
 fun_calc_t <- function(type = "two.sided"){
-  print(type)
   ## define range of significance levels
   alpha <- c(0.01, 0.025, 0.05)
   ## defining the range of n and theta to be evaluated

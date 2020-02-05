@@ -13,7 +13,6 @@ sse_prop <- function(input, output, session, calcs){
     power <- as.numeric(input$in_power)
 
     p_diff_val <- as.numeric(toString(max(c(p1,p2))-min(c(p1,p2))))
-    print(p_diff_val)
     validate({
       need(p_diff_val > 0, "Difference in probabilities in group 1 and 2 is outside of plottable range. It must be > 0 and <= 0.5")
       if(p_diff_val > 0.5){
