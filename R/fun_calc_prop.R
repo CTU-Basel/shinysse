@@ -17,10 +17,11 @@ fun_calc_prop <- function(){
                                seq(from = 0.2, to = 0.5, by = 0.05)), # possible range of effect sizes
                      xi = seq(from = 0.05, to = 1, by = 0.05)) # possible range of proportions
 
-  ## defining a power-function based on a power.prop.test
+  ## defining a power fun based on a power.prop.test
   powFuns_prop <- list()
-  for(i in 1:length(alpha)){
-    eval(parse(text = paste(paste0("powFuns_prop[[", paste0("'alpha", sub(".", "p", alpha[i], fixed = TRUE)), "']]", " <- function(psi)"),
+  for (i in 1:length(alpha)){
+    eval(parse(text = paste(paste0("powFuns_prop[[", paste0("'alpha", sub(".", "p", alpha[i], fixed = TRUE)), "']]",
+                                   " <- function(psi)"),
                             "{",
                             "p1 = xi(psi)",
                             "power.prop.test(n = sse::n(psi)/2,",
@@ -31,13 +32,8 @@ fun_calc_prop <- function(){
                             ")$power",
                             "}", sep = "\n")))
   }
-
-  ## evaulate power-function for all combinations of n, theta, xi and alpha
+  ## evaulate power function for all combinations of n, theta, xi and alpha
   calc_prop <- map(powFuns_prop, ~powCalc(psi_prop, .))
-
-  ## readRDS
-  calc_prop <- readRDS("calc_prop_test.rds")
-  calc_prop <- readRDS(system.file("extdata", "calc_prop_test.rds", package = "shinyssepkg"))
   ## save calcs to be used in the shiny app
   save_path <- file.path("inst", "extdata", "calc_prop_test.rds")
   saveRDS(calc_prop, save_path)

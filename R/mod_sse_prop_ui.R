@@ -3,17 +3,17 @@
 #' @seealso \code{\link{sse_prop}}
 #'
 sse_prop_ui <- function(id, label){
-  box_width = 3
-  box_height = 190
+  box_width <- 3
+  box_height <- 190
   ns <- NS(id)
   tabItem(label,
           br(), br(),
           h2("Proportion Test based sample size estimation"),
           fluidPage(
             fluidRow(
-              br(),br(),
+              br(), br(),
               p(""),
-              br(),br()
+              br(), br()
             ),
             fluidRow(
               box(
@@ -43,9 +43,9 @@ sse_prop_ui <- function(id, label){
             ),
             fluidRow(
               box(
-                plotOutput(ns("out_plot1"), height = 250*2),
+                plotOutput(ns("out_plot1"), height = 250 * 2),
                 width = 12,
-                height = 250*2+20
+                height = 250 * 2 + 20
               ),
             )
           )

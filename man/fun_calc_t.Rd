@@ -4,7 +4,7 @@
 \alias{fun_calc_t}
 \title{Evaluates power -function for power.t.test}
 \usage{
-fun_calc_t(type = "two.sided")
+fun_calc_t(type = "two.sample")
 }
 \arguments{
 \item{type}{character string specifying the type of t test. options: "two.sample", "one.sample", "paired"}

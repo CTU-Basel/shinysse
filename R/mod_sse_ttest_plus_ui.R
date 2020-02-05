@@ -6,17 +6,17 @@
 #' @seealso \code{\link{sse_ttest_plus}}
 #'
 sse_ttest_plus_ui <- function(id, label){
-  box_width = 3
-  box_height = 230
+  box_width <- 3
+  box_height <- 230
   ns <- NS(id)
   tabItem(label,
           br(), br(),
           h2("T - Test based sample size estimation with input"),
           fluidPage(
             fluidRow(
-              br(),br(),
+              br(), br(),
               p(""),
-              br(),br()
+              br(), br()
             ),
             fluidRow(
               box(

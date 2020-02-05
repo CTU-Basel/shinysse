@@ -12,10 +12,11 @@ sse_prop <- function(input, output, session, calcs){
     sigLevel <- as.numeric(input$in_alpha)
     power <- as.numeric(input$in_power)
 
-    p_diff_val <- as.numeric(toString(max(c(p1,p2))-min(c(p1,p2))))
+    p_diff_val <- as.numeric(toString(max(c(p1, p2)) - min(c(p1, p2))))
     validate({
-      need(p_diff_val > 0, "Difference in probabilities in group 1 and 2 is outside of plottable range. It must be > 0 and <= 0.5")
-      if(p_diff_val > 0.5){
+      need(p_diff_val > 0,
+           "Difference in probabilities in group 1 and 2 is outside of plottable range. It must be > 0 and <= 0.5")
+      if (p_diff_val > 0.5){
         calcAppx <- power.prop.test(n = NULL,
                                     p1 = p1,
                                     p2 = p2,
@@ -23,7 +24,7 @@ sse_prop <- function(input, output, session, calcs){
                                     power = power)
         need(p_diff_val <= 0.5,
              paste0("Difference in probabilities in group 1 and 2 is outside of plottable range. ",
-                    "It must be > 0 and <= 0.5. The estimated sample size is ", ceiling(calcAppx$n*2)))
+                    "It must be > 0 and <= 0.5. The estimated sample size is ", ceiling(calcAppx$n * 2)))
       }
     })
     p_diff_val
@@ -38,7 +39,8 @@ sse_prop <- function(input, output, session, calcs){
 
     ## validate
     validate({
-      need(p_diff() > 0, "Difference in probabilities in group 1 and 2 is outside of plottable range. It must be > 0 and <= 0.5")
+      need(p_diff() > 0,
+           "Difference in probabilities in group 1 and 2 is outside of plottable range. It must be > 0 and <= 0.5")
     })
 
     ## calculate an example sample size for given parameters
@@ -48,15 +50,15 @@ sse_prop <- function(input, output, session, calcs){
 
     ## dynamically define x and y axis limits for a nicer plotting experience
     ylim <- c(0, 10000)
-    if(calcN < 10) {
+    if (calcN < 10) {
       ylim <- c(0, 20)
-    } else if(calcN < 50) {
+    } else if (calcN < 50) {
       ylim <- c(0, 100)
-    } else if(calcN < 250) {
+    } else if (calcN < 250) {
       ylim <- c(0, 500)
-    } else if(calcN < 500) {
+    } else if (calcN < 500) {
       ylim <- c(0, 1000)
-    } else if(calcN < 2000) {
+    } else if (calcN < 2000) {
       ylim <- c(0, 4000)
     }
 

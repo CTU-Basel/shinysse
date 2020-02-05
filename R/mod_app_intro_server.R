@@ -2,4 +2,6 @@
 #'
 #' @seealso \code{\link{app_intro}}
 #'
-app_intro <- function(input, output, session){}
+app_intro <- function(input, output, session) {
+
+}

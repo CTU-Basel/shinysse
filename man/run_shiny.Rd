@@ -7,8 +7,7 @@
 run_shiny()
 }
 \description{
-This runs the shinysse Shiny web application. You can run the application by
-calling the run_shiny() function.
+You can run the web application by alling the run_shiny() function.
 }
 \seealso{
 \code{\link{app}},\code{\link{app_ui}}
