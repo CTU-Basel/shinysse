@@ -2,7 +2,6 @@
 
 export(app_server)
 export(app_ui)
-export(dash)
 export(fun_calc_prop)
 export(fun_calc_t)
 export(get_header_mint)
