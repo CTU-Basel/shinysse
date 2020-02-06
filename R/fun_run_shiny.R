@@ -9,4 +9,5 @@ run_shiny <- function(){
     ## make resources available globally from non standard location
     addResourcePath("www", system.file("www", package = "shinysse"))
     shiny_app <- shinyApp(ui = app_ui, server = app_server)
+    return(shiny_app)
 }
