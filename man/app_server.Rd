@@ -2,12 +2,12 @@
 % Please edit documentation in R/app_server.R
 \name{app_server}
 \alias{app_server}
-\title{Shiny main app server function for shinysse}
+\title{Main Shiny server function for shinysse}
 \usage{
 app_server(input, output)
 }
 \description{
-Calls modules defined in app_ui, and passes on relevant data.
+Calls modules listed in app_ui, and passes on relevant data.
 }
 \seealso{
 \code{\link{app_ui}}, \code{\link{run_shiny}}

@@ -1,21 +1,20 @@
-#' Shiny module UI function for the sse power.t.test module
+#' Shiny module UI function for the display of sse for t-test
 #'
-#' This shiny UI function to be used for sseBasic() server.
+#' Plots results of the power.t.test for the two-sample or paired t-test.
 #'
-#' @seealso \code{\link{sseBasic}}
+#' @seealso \code{\link{sse_ttest}}
 #'
-sseBasicUI <- function(id, label){
-  box_width = 3
-  box_height = 190
+sse_ttest_ui <- function(id, label){
+  box_width <- 3
+  box_height <- 190
   ns <- NS(id)
   tabItem(label,
           br(), br(),
           h2("T - Test based sample size estimation"),
           fluidPage(
             fluidRow(
-              br(),br(),
-              p(""),
-              br(),br()
+              br(), br(),
+              p("")
             ),
             fluidRow(
               box(
@@ -50,9 +49,9 @@ sseBasicUI <- function(id, label){
             ),
             fluidRow(
               box(
-                plotOutput(ns("out_plot1"), height = 250*2),
+                plotOutput(ns("out_plot1"), height = 250 * 2),
                 width = 12,
-                height = 250*2+20
+                height = 250 * 2 + 20
               ),
             )
           )

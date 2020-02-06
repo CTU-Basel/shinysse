@@ -1,22 +1,27 @@
-#' Shiny module UI function for the sse power.t.test module with user input
+#' Shiny module UI function for the display of sse for t-test
 #'
-#' This UI gives the user an opportunity to enter two group means as numeric inputs, in addition to standard deviation,
-#' etc.
+#' Enhanced version of \code{\link{sse_ttest}}. It allows users to input group means and
+#' standard deviation, then plots the expected distribution of data points for these groups,
+#' Additionally, it plots results of the power.t.test for the two-sample or paired t-test.
 #'
-#' @seealso \code{\link{ssePlus}}
+#' @seealso \code{\link{sse_ttest_plus}}
 #'
-ssePlusUI <- function(id, label){
-  box_width = 3
-  box_height = 230
+sse_ttest_plus_ui <- function(id, label){
+  box_width <- 3
+  box_height <- 230
   ns <- NS(id)
   tabItem(label,
           br(), br(),
           h2("T - Test based sample size estimation with input"),
           fluidPage(
             fluidRow(
-              br(),br(),
-              p(""),
-              br(),br()
+              br(), br(),
+              p("")
+            ),
+            fluidRow(
+              box(
+                radioButtons(ns("in_type"), "Select a t-test type:", c("two-sample", "paired")),
+              )
             ),
             fluidRow(
               box(

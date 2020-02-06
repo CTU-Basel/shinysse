@@ -1,18 +1,22 @@
-#' Shiny module server function for the sse power.t.test module with user input
+#' Shiny module server function for the display of sse for t-test
 #'
-#' This shiny server function to be used for ssePlusUI().
+#' Enhanced version of \code{\link{sse_ttest}}. It allows users to input group means and
+#' standard deviation, then plots the expected distribution of data points for these groups,
+#' Additionally, it plots results of the power.t.test for the two-sample or paired t-test.
 #'
-#' @seealso \code{\link{ssePlusUI}}
+#' @seealso \code{\link{sse_ttest_plus_ui}}
 #'
-ssePlus <- function(input, output, session, calcs){
+sse_ttest_plus <- function(input, output, session, calcs_twosample, calcs_paired){
   ## validity checks
   effSize <- reactive({
     m1 <- input$mean_g1
     m2 <- input$mean_g2
     effSize_val <- abs(m1 - m2)
     validate({
-      need(((m1 %% 1) == 0) & ((m2 %% 1) == 0), "Only integers are allowed for group means")
-      need((effSize_val >= 5) & (effSize_val <= 50), "The difference in expected means between group 1 and group 2 should be >=5 and <= 50.")
+      need( ( (m1 %% 1) == 0) & ( (m2 %% 1) == 0),
+            "Only integers are allowed for group means")
+      need( (effSize_val >= 5) & (effSize_val <= 50),
+           "The difference in expected means between group 1 and group 2 should be >=5 and <= 50.")
     })
     return(effSize_val)
   })
@@ -40,7 +44,8 @@ ssePlus <- function(input, output, session, calcs){
             panel.grid.minor = element_blank(),
             panel.border = element_blank())
     return(p)
-  }, height = 270, width = 285)
+  },
+  height = 270, width = 285)
 
 
   ## sse plot
@@ -49,6 +54,11 @@ ssePlus <- function(input, output, session, calcs){
     sigLevel <- as.numeric(input$in_alpha)
     power <- as.numeric(input$in_power)
     sd <- as.numeric(input$stdev)
+    if (input$in_type == "paired"){
+      calcs <- calcs_paired
+    } else{
+      calcs <- calcs_twosample
+    }
 
     calc <- calcs[[paste0("alpha", sub(".", "p", sigLevel, fixed = TRUE))]]
     example <- powEx(calc, theta = effSize(), xi = sd, power = power)
@@ -57,34 +67,33 @@ ssePlus <- function(input, output, session, calcs){
     ## validations
     validate({
       calcAppx <- list(n = calcN)
-      if(is.na(calcN)){
+      if (is.na(calcN)){
         calcAppx <- power.t.test(n = NULL,
                                  delta = effSize(),
                                  sd = sd,
                                  sig.level = sigLevel,
                                  power = power)
       }
-      need(!is.na(calcN), paste0("Estimated sample size is ", ceiling(calcAppx$n*2), " , which is outside of plottable range."))
+      need( !is.na(calcN),
+           paste0("Estimated sample size is ", ceiling(calcAppx$n * 2), " , which is outside of plottable range."))
     })
     ## dynamically define x and y axis limits for a nicer plotting experience
     ylim <- c(0, 2000)
-    if(calcN < 10) {
+    if (calcN < 10) {
       ylim <- c(0, 20)
-    } else if(calcN < 50) {
+    } else if (calcN < 50) {
       ylim <- c(0, 100)
-    } else if(calcN < 250) {
+    } else if (calcN < 250) {
       ylim <- c(0, 500)
-    } else if(calcN < 500) {
+    } else if (calcN < 500) {
       ylim <- c(0, 1000)
     }
 
     p <- plot(example,
-              # xi = sd, # this should come from radio button chosen sig lev
-              at = c(0.7, 0.8, 0.9, 0.95), # 3 possible values for power
+              at = c(0.7, 0.8, 0.9, 0.95),
               ylab = "sample size",
               xlab = "treatment effect",
               ylim = ylim # adjust dynamically
-              # xlim = xlim # adjust dynamically
     )
     return(p)
   })

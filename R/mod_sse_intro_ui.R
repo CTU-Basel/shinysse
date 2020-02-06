@@ -1,8 +1,8 @@
-#' Shiny module UI function for the sse introduction page
+#' Shiny module UI function for the app introduction page
 #'
-#' @seealso \code{\link{dash}}
+#' @seealso \code{\link{sse_intro}}
 #'
-dashUI <- function(id, label){
+sse_intro_ui <- function(id, label){
   ns <- NS(id)
   tabItem(label,
           br(), br(),
@@ -14,7 +14,8 @@ dashUI <- function(id, label){
                   p("This app is designed for demonstration purposes only,
             and cannot replace a well crafted statistical modelling performed by a skilled statistician."))),
             fluidRow(
-              p("Sample size estimation is the process of estimating the number of replicates to include in a statistical study."),
+              p("Sample size estimation is the process of estimating
+                the number of replicates to include in a statistical study."),
               p("It crucially depends on several variables:"),
               tags$ul(
                 tags$li("Chosen test statistics"),

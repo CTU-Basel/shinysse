@@ -1,21 +1,20 @@
-#' Shiny main app UI function for shinysse
+#' Main shiny UI function for shinysse
 #'
-#' Controls the general appearance, header, sidebar, body, modules, etc.
+#' Controls the general appearance, header, sidebar, body, tabs with modules, etc.
 #'
-#' @seealso \code{\link{app}}
+#' @seealso \code{\link{app_server}}
 #' @export
 #'
 app_ui <- function(){
-  mod <- fun_get_mods()
+  mod <- get_module_registry()
   dashboardPage(
     get_header_mint("SSE app"),
     dashboardSidebar(
       div(p(" ")),
       sidebarMenu(
-        menuItem("Introduction", tabName = mod$dash, icon = icon("info")),
-        menuItem("Two sample t-Test SSE", tabName = mod$sse_basic, icon = icon("text-size", lib = "glyphicon")),
-        menuItem("Two sample t-Test SSE + input", tabName = mod$sse_plus, icon = icon("text-size", lib = "glyphicon")),
-        menuItem("Paired t-Test SSE + input", tabName = mod$sse_plus_paired, icon = icon("text-size", lib = "glyphicon")),
+        menuItem("Introduction", tabName = mod$sse_intro, icon = icon("info")),
+        menuItem("Two sample t-Test SSE", tabName = mod$sse_ttest, icon = icon("text-size", lib = "glyphicon")),
+        menuItem("Two sample t-Test SSE + input", tabName = mod$sse_ttest_plus, icon = icon("text-size", lib = "glyphicon")),
         menuItem("Proportion Test SSE", tabName = mod$sse_prop, icon = icon("percentage"))
       )
     ),
@@ -24,11 +23,10 @@ app_ui <- function(){
         tags$link(rel = "stylesheet", type = "text/css", href = "www/custom.css")
       ),
       tabItems(
-        dashUI(mod$dash, label = mod$dash),
-        sseBasicUI(mod$sse_basic, label = mod$sse_basic),
-        ssePlusUI(mod$sse_plus, label = mod$sse_plus),
-        ssePlusUI(mod$sse_plus_paired, label = mod$sse_plus_paired),
-        ssePropUI(mod$sse_prop, label = mod$sse_prop)
+        sse_intro_ui(mod$sse_intro, label = mod$sse_intro),
+        sse_ttest_ui(mod$sse_ttest, label = mod$sse_ttest),
+        sse_ttest_plus_ui(mod$sse_ttest_plus, label = mod$sse_ttest_plus),
+        sse_prop_ui(mod$sse_prop, label = mod$sse_prop)
       )
     )
   )

@@ -10,7 +10,7 @@ get_header_mint(header_title)
 \item{header_title}{string containing a header title}
 }
 \value{
-shiny.tag list with a custom header with title as defined in header_title
+shiny.tag list with a custom header
 }
 \description{
 Shinydashboard two-color custom mint header
