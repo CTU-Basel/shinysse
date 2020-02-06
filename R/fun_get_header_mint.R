@@ -1,7 +1,7 @@
 #' Shinydashboard two-color custom mint header
 #'
 #' @param header_title string containing a header title
-#' @return shiny.tag list with a custom header with title as defined in header_title
+#' @return shiny.tag list with a custom header
 #' @export
 #'
 get_header_mint <- function(header_title){

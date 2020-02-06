@@ -1,7 +1,7 @@
 #' Evaluates power functions for power.t.test
 #'
 #' For all pre-set combinations of n, theta, xi and alpha, this function calculates a list of powCalc
-#' objects and saves them.
+#' objects and saves the list.
 #'
 #' Input parameters are optional. Defaults:
 #' * n <- seq(from = 5, to = 2000, by = 5)
@@ -17,6 +17,7 @@
 #' @param type string of value "two.sample", "one.sample", or "paired"
 #' @param save_path string inidicating where the function output should be saved
 #' @return list of calculated powCalc objects
+#' @seealso \code{\link{calc_prop}}
 #' @export
 #'
 calc_t <- function(n, theta, xi, alpha, type, save_path){

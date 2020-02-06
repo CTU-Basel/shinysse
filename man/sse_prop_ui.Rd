@@ -2,12 +2,12 @@
 % Please edit documentation in R/mod_sse_prop_ui.R
 \name{sse_prop_ui}
 \alias{sse_prop_ui}
-\title{Shiny module UI function for the sse power.prop.test module}
+\title{Shiny module UI function for the display of sse for test for proportions}
 \usage{
 sse_prop_ui(id, label)
 }
 \description{
-Shiny module UI function for the sse power.prop.test module
+Plots results of the power.prop.test for the two-sample test for proportions.
 }
 \seealso{
 \code{\link{sse_prop}}

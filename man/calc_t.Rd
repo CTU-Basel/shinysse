@@ -24,7 +24,7 @@ list of calculated powCalc objects
 }
 \description{
 For all pre-set combinations of n, theta, xi and alpha, this function calculates a list of powCalc
-objects and saves them.
+objects and saves the list.
 }
 \details{
 Input parameters are optional. Defaults:
@@ -35,4 +35,7 @@ Input parameters are optional. Defaults:
 \item alpha <- c(0.01, 0.025, 0.05)
 \item save_path <- file.path("inst", "extdata", "calc_t_test.rds")
 }
+}
+\seealso{
+\code{\link{calc_prop}}
 }

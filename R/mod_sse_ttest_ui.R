@@ -1,6 +1,6 @@
-#' Shiny module UI function for the sse power.t.test module
+#' Shiny module UI function for the display of sse for t-test
 #'
-#' This shiny UI function to be used for sse_ttest() server.
+#' Plots results of the power.t.test for the two-sample or paired t-test.
 #'
 #' @seealso \code{\link{sse_ttest}}
 #'

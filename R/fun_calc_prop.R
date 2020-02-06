@@ -1,7 +1,7 @@
 #' Evaluates power functions for power.prop.test
 #'
 #' For all pre-set combinations of n, theta, xi and alpha, this function calculates a list of powCalc
-#' objects and saves.
+#' objects and saves the list.
 #'
 #' Input parameters are optional. Defaults:
 #' * n <- seq(from = 3, to = 10000, by = 5)
@@ -14,8 +14,9 @@
 #' @param theta numeric vector containing possible range of effect sizes
 #' @param xi numeric vector containing possible range of proportions
 #' @param alpha numeric vector containing possible range of significance levels
-#'  @param save_path string inidicating where the function output should be saved
+#' @param save_path string inidicating where the function output should be saved
 #' @return list of calculated powCalc objects
+#' @seealso \code{\link{calc_t}}
 #' @export
 #'
 calc_prop <- function(n, theta, xi, alpha, save_path){

@@ -1,4 +1,6 @@
-#' Shiny module server function for the sse power.prop.test module
+#' Shiny module server function for the display of sse for test for proportions
+#'
+#' Plots results of the power.prop.test for the two-sample test for proportions.
 #'
 #' @seealso \code{\link{sse_prop_ui}}
 #'

@@ -2,16 +2,16 @@
 % Please edit documentation in R/fun_get_module_registry.R
 \name{get_module_registry}
 \alias{get_module_registry}
-\title{Retrieves a list of module names}
+\title{Retrieves a list of module aliases}
 \usage{
 get_module_registry()
 }
 \value{
-list of strings containing names of
+list of strings containing module aliases
 }
 \description{
-These names will be used to define module IDs in shiny::callModule(),
-and also as tabnames for the sidebar, and shiny UI function label and id.
+Module aliases retrieved via get_module_registry() are used to define module IDs in shiny::callModule(),
+and are also used as tabnames for the sidebar, and shiny UI function, label and id.
 }
 \seealso{
 \code{\link{app_ui}}, \code{\link{app_server}}

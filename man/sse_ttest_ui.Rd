@@ -2,12 +2,12 @@
 % Please edit documentation in R/mod_sse_ttest_ui.R
 \name{sse_ttest_ui}
 \alias{sse_ttest_ui}
-\title{Shiny module UI function for the sse power.t.test module}
+\title{Shiny module UI function for the display of sse for t-test}
 \usage{
 sse_ttest_ui(id, label)
 }
 \description{
-This shiny UI function to be used for sse_ttest() server.
+Plots results of the power.t.test for the two-sample or paired t-test.
 }
 \seealso{
 \code{\link{sse_ttest}}

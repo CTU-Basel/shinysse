@@ -2,13 +2,14 @@
 % Please edit documentation in R/mod_sse_ttest_plus_ui.R
 \name{sse_ttest_plus_ui}
 \alias{sse_ttest_plus_ui}
-\title{Shiny module UI function for the sse power.t.test module with user input}
+\title{Shiny module UI function for the display of sse for t-test}
 \usage{
 sse_ttest_plus_ui(id, label)
 }
 \description{
-This UI gives the user an opportunity to enter two group means as numeric inputs, in addition to standard deviation,
-etc.
+Enhanced version of \code{\link{sse_ttest}}. It allows users to input group means and
+standard deviation, then plots the expected distribution of data points for these groups,
+Additionally, it plots results of the power.t.test for the two-sample or paired t-test.
 }
 \seealso{
 \code{\link{sse_ttest_plus}}

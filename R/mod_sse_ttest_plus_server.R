@@ -1,6 +1,8 @@
-#' Shiny module server function for the sse power.t.test module with user input
+#' Shiny module server function for the display of sse for t-test
 #'
-#' This shiny server function to be used for sse_ttest_plus_ui().
+#' Enhanced version of \code{\link{sse_ttest}}. It allows users to input group means and
+#' standard deviation, then plots the expected distribution of data points for these groups,
+#' Additionally, it plots results of the power.t.test for the two-sample or paired t-test.
 #'
 #' @seealso \code{\link{sse_ttest_plus_ui}}
 #'
