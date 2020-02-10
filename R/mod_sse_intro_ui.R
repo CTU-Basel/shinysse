@@ -26,9 +26,9 @@ sse_intro_ui <- function(id, label){
               ),
               p("This app consists of several tabs, each representing a different test statistics:"),
               tags$ul(
-                tags$li("Two sample t-test"),
+                tags$li("Two-sample t-test"),
                 tags$li("Paired t-test"),
-                tags$li("Proportion test")
+                tags$li("Test for proportions")
               )
             )
           )
