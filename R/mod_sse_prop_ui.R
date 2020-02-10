@@ -10,7 +10,7 @@ sse_prop_ui <- function(id, label){
   ns <- NS(id)
   tabItem(label,
           br(), br(),
-          h2("Proportion Test based sample size estimation"),
+          h2("Test for Proportions based sample size estimation"),
           fluidPage(
             fluidRow(
               br(), br(),

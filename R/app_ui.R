@@ -13,9 +13,9 @@ app_ui <- function(){
       div(p(" ")),
       sidebarMenu(
         menuItem("Introduction", tabName = mod$sse_intro, icon = icon("info")),
-        menuItem("Two sample t-Test SSE", tabName = mod$sse_ttest, icon = icon("text-size", lib = "glyphicon")),
-        menuItem("Two sample t-Test SSE + input", tabName = mod$sse_ttest_plus, icon = icon("text-size", lib = "glyphicon")),
-        menuItem("Proportion Test SSE", tabName = mod$sse_prop, icon = icon("percentage"))
+        menuItem("T-Test SSE", tabName = mod$sse_ttest, icon = icon("text-size", lib = "glyphicon")),
+        menuItem("T-Test SSE + input", tabName = mod$sse_ttest_plus, icon = icon("text-size", lib = "glyphicon")),
+        menuItem("Test for Proportions SSE", tabName = mod$sse_prop, icon = icon("percentage"))
       )
     ),
     dashboardBody(

@@ -1,7 +1,7 @@
 Package: shinysse
 Type: Package
 Title: Sample size estimation demo shiny app
-Version: 0.1.3
+Version: 0.1.4
 Author: Milica Markovic
 Maintainer: Milica Markovic <milica.markovic@usb.ch>
 Description: Shiny package providing a sample size estimation (sse) web app
