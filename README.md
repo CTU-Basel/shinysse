@@ -16,6 +16,9 @@ Run the app localy on your computer after installation
 
 `shinysse::run_shiny()`
 
+To run the app on the shiny site connect to:
+https://dkfbasel.shinyapps.io/shinysse/
+
 ## For contributors
 
 ### Linting
